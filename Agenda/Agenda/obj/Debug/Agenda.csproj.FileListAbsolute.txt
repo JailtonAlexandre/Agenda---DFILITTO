@@ -1,0 +1,11 @@
+D:\Projetos\Agenda\Agenda\bin\Debug\Agenda.exe.config
+D:\Projetos\Agenda\Agenda\bin\Debug\Agenda.exe
+D:\Projetos\Agenda\Agenda\bin\Debug\Agenda.pdb
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.csproj.AssemblyReference.cache
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.frmCadastroContato.resources
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.frmPrincipal.resources
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.Properties.Resources.resources
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.csproj.GenerateResource.cache
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.csproj.CoreCompileInputs.cache
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.exe
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.pdb
