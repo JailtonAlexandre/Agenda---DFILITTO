@@ -46,7 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexao.cs" />
     <Compile Include="Contato.cs" />
+    <Compile Include="DALContato.cs" />
     <Compile Include="frmCadastroContato.cs">
       <SubType>Form</SubType>
     </Compile>

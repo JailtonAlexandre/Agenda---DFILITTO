@@ -90,14 +90,32 @@ namespace Agenda
             contato.Cidade = txtCidade.Text;
             contato.Bairro = txtBairro.Text;
 
+            string strConexao = "Data Source=WS006098\\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=True";
+            Conexao conexao = new Conexao(strConexao);
+            //try
+            //{
+            //    conexao.Conectar();
+            //    MessageBox.Show("Conexao realizada com sucesso");
+            //}
+            //catch (Exception erro)
+            //{
+            //    MessageBox.Show(erro.Message);
+            //}
+
+            DALContato dal = new DALContato(conexao);
             if (this.operacao == "inserir")
             {
-                //inserir registro no BD
+                //inserir registro no BD                
+                dal.Incluir(contato);
+                MessageBox.Show("O código gerado foi: " + contato.Codigo.ToString());
+                             
+                
             }
             else
             {
                 contato.Codigo = Convert.ToInt32(txtCodigo.Text);
                 //alterar o contato que esta na tela
+                dal.Alterar(contato);
             }
         }
     }
