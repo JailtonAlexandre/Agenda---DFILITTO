@@ -45,6 +45,7 @@ namespace Agenda
             {
                 btExcluir.Enabled = true;
                 btAlterar.Enabled = true;
+                btCancelar.Enabled = true;
             }
         }
         public void LimpaCampos()
@@ -107,15 +108,61 @@ namespace Agenda
             {
                 //inserir registro no BD                
                 dal.Incluir(contato);
-                MessageBox.Show("O código gerado foi: " + contato.Codigo.ToString());
-                             
-                
+                MessageBox.Show("O código gerado foi: " + contato.Codigo.ToString());                          
             }
             else
             {
-                contato.Codigo = Convert.ToInt32(txtCodigo.Text);
                 //alterar o contato que esta na tela
+                contato.Codigo = Convert.ToInt32(txtCodigo.Text);
                 dal.Alterar(contato);
+                MessageBox.Show("Registro ALETERADO com sucesso");
+
+            }
+            this.AleteraBotoes(1);
+            this.LimpaCampos();
+        }
+
+        private void btLocalizar_Click(object sender, EventArgs e)
+        {
+            frmConsultaContato f = new frmConsultaContato();
+            f.ShowDialog();
+            if (f.codigo != 0) 
+            {
+                string strConexao = "Data Source=WS006098\\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=True";
+                Conexao conexao = new Conexao(strConexao);
+                DALContato dal = new DALContato(conexao);
+                Contato contato = dal.carregaContato(f.codigo);
+                txtCodigo.Text = contato.Codigo.ToString();
+                txtNome.Text = contato.Nome;
+                txtEmail.Text = contato.Email;
+                txtFone.Text = contato.Fone;
+                txtBairro.Text = contato.Bairro;
+                txtCep.Text = contato.Cep;
+                txtRua.Text = contato.Rua;
+                txtEstado.Text = contato.Estado;
+                txtCidade.Text = contato.Cidade;
+                this.AleteraBotoes(3);
+            }
+            f.Dispose();
+        }
+
+        private void btAlterar_Click(object sender, EventArgs e)
+        {
+            this.operacao = "alterar";
+            this.AleteraBotoes(2);
+        }
+
+        private void btExcluir_Click(object sender, EventArgs e)
+        {
+            DialogResult d = MessageBox.Show("Deseja EXCLUIR o registro? ", "Aviso", MessageBoxButtons.YesNo);
+            if (d.ToString() == "Yes") 
+            {
+                string strConexao = "Data Source=WS006098\\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=True";
+                Conexao conexao = new Conexao(strConexao);
+                DALContato dal = new DALContato(conexao);
+                dal.Excluir(Convert.ToInt32(txtCodigo.Text));
+                this.AleteraBotoes(1);
+                this.LimpaCampos();
             }
         }
     }

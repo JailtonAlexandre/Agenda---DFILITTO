@@ -55,6 +55,12 @@
     <Compile Include="frmCadastroContato.Designer.cs">
       <DependentUpon>frmCadastroContato.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultaContato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaContato.Designer.cs">
+      <DependentUpon>frmConsultaContato.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,18 +72,16 @@
     <EmbeddedResource Include="frmCadastroContato.resx">
       <DependentUpon>frmCadastroContato.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaContato.resx">
+      <DependentUpon>frmConsultaContato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -90,6 +94,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecurityAndMaintenance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40AppHelpToast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40AudioToastIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40EnrollmentToastIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40VpnToastIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\%40WirelessDisplayToast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultAccountTile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecurityAndMaintenance1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecurityAndMaintenance_Alert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SecurityAndMaintenance_Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_paper_file_correct_done_list_document_icon_219488.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clipboard_paper_file_correct_done_list_document_icon_219488.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

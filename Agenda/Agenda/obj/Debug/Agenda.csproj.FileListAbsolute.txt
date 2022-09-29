@@ -9,3 +9,4 @@ D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.csproj.GenerateResource.cache
 D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.csproj.CoreCompileInputs.cache
 D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.exe
 D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.pdb
+D:\Projetos\Agenda\Agenda\obj\Debug\Agenda.frmConsultaContato.resources
