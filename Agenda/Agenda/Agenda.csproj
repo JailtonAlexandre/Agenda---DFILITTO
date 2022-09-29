@@ -131,5 +131,20 @@
   <ItemGroup>
     <None Include="Resources\clipboard_paper_file_correct_done_list_document_icon_219488.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486485559-118arrow-down-download-downloads-downloading-save_81191.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Downloads_29996.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder-search-4341327_120553.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcsconflicting_93497.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vcsnormal_93488.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

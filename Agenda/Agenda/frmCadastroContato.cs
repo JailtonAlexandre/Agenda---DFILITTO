@@ -81,45 +81,57 @@ namespace Agenda
 
         private void btSalvar_Click(object sender, EventArgs e)
         {
-            Contato contato = new Contato();
-            contato.Nome = txtNome.Text;
-            contato.Email = txtEmail.Text;
-            contato.Fone = txtFone.Text;
-            contato.Estado = txtEstado.Text;
-            contato.Cep = txtCep.Text;
-            contato.Rua = txtRua.Text;
-            contato.Cidade = txtCidade.Text;
-            contato.Bairro = txtBairro.Text;
-
-            string strConexao = "Data Source=WS006098\\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=True";
-            Conexao conexao = new Conexao(strConexao);
-            //try
-            //{
-            //    conexao.Conectar();
-            //    MessageBox.Show("Conexao realizada com sucesso");
-            //}
-            //catch (Exception erro)
-            //{
-            //    MessageBox.Show(erro.Message);
-            //}
-
-            DALContato dal = new DALContato(conexao);
-            if (this.operacao == "inserir")
+            try
             {
-                //inserir registro no BD                
-                dal.Incluir(contato);
-                MessageBox.Show("O código gerado foi: " + contato.Codigo.ToString());                          
-            }
-            else
-            {
-                //alterar o contato que esta na tela
-                contato.Codigo = Convert.ToInt32(txtCodigo.Text);
-                dal.Alterar(contato);
-                MessageBox.Show("Registro ALETERADO com sucesso");
+                Contato contato = new Contato();
+                if (txtNome.Text.Length <= 0)
+                {
+                    MessageBox.Show("Nome obrigatório");
+                    return;
+                }
+                contato.Nome = txtNome.Text;
+                contato.Email = txtEmail.Text;
+                contato.Fone = txtFone.Text;
+                contato.Estado = txtEstado.Text;
+                contato.Cep = txtCep.Text;
+                contato.Rua = txtRua.Text;
+                contato.Cidade = txtCidade.Text;
+                contato.Bairro = txtBairro.Text;
 
+                string strConexao = "Data Source=WS006098\\SQLEXPRESS;Initial Catalog=Agenda;Integrated Security=True";
+                Conexao conexao = new Conexao(strConexao);
+                //try
+                //{
+                //    conexao.Conectar();
+                //    MessageBox.Show("Conexao realizada com sucesso");
+                //}
+                //catch (Exception erro)
+                //{
+                //    MessageBox.Show(erro.Message);
+                //}
+
+                DALContato dal = new DALContato(conexao);
+                if (this.operacao == "inserir")
+                {
+                    //inserir registro no BD                
+                    dal.Incluir(contato);
+                    MessageBox.Show("O código gerado foi: " + contato.Codigo.ToString());
+                }
+                else
+                {
+                    //alterar o contato que esta na tela
+                    contato.Codigo = Convert.ToInt32(txtCodigo.Text);
+                    dal.Alterar(contato);
+                    MessageBox.Show("Registro ALETERADO com sucesso");
+
+                }
+                this.AleteraBotoes(1);
+                this.LimpaCampos();
             }
-            this.AleteraBotoes(1);
-            this.LimpaCampos();
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message);
+            }
         }
 
         private void btLocalizar_Click(object sender, EventArgs e)

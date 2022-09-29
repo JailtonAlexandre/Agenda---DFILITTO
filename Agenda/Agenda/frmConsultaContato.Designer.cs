@@ -29,6 +29,7 @@ namespace Agenda
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaContato));
             this.label1 = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.btExecutar = new System.Windows.Forms.Button();
@@ -47,18 +48,21 @@ namespace Agenda
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(12, 25);
+            this.txtValor.Location = new System.Drawing.Point(15, 34);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(679, 20);
+            this.txtValor.Size = new System.Drawing.Size(629, 20);
             this.txtValor.TabIndex = 1;
             // 
             // btExecutar
             // 
-            this.btExecutar.Location = new System.Drawing.Point(697, 24);
+            this.btExecutar.Image = ((System.Drawing.Image)(resources.GetObject("btExecutar.Image")));
+            this.btExecutar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExecutar.Location = new System.Drawing.Point(669, 9);
             this.btExecutar.Name = "btExecutar";
-            this.btExecutar.Size = new System.Drawing.Size(75, 21);
+            this.btExecutar.Size = new System.Drawing.Size(100, 45);
             this.btExecutar.TabIndex = 2;
             this.btExecutar.Text = "Localizar";
+            this.btExecutar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btExecutar.UseVisualStyleBackColor = true;
             this.btExecutar.Click += new System.EventHandler(this.btExecutar_Click);
             // 
@@ -67,7 +71,7 @@ namespace Agenda
             this.dgDados.AllowUserToAddRows = false;
             this.dgDados.AllowUserToDeleteRows = false;
             this.dgDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDados.Location = new System.Drawing.Point(15, 57);
+            this.dgDados.Location = new System.Drawing.Point(15, 74);
             this.dgDados.Name = "dgDados";
             this.dgDados.ReadOnly = true;
             this.dgDados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

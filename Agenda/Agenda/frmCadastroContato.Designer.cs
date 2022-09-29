@@ -29,6 +29,7 @@ namespace Agenda
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroContato));
             this.pDados = new System.Windows.Forms.Panel();
             this.txtCep = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -244,61 +245,79 @@ namespace Agenda
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(655, 17);
+            this.btCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btCancelar.Image")));
+            this.btCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btCancelar.Location = new System.Drawing.Point(646, 17);
             this.btCancelar.Name = "btCancelar";
-            this.btCancelar.Size = new System.Drawing.Size(93, 32);
+            this.btCancelar.Size = new System.Drawing.Size(100, 45);
             this.btCancelar.TabIndex = 5;
             this.btCancelar.Text = "Cancelar";
+            this.btCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btCancelar.UseVisualStyleBackColor = true;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btSalvar
             // 
-            this.btSalvar.Location = new System.Drawing.Point(536, 17);
+            this.btSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btSalvar.Image")));
+            this.btSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btSalvar.Location = new System.Drawing.Point(539, 17);
             this.btSalvar.Name = "btSalvar";
-            this.btSalvar.Size = new System.Drawing.Size(93, 32);
+            this.btSalvar.Size = new System.Drawing.Size(100, 45);
             this.btSalvar.TabIndex = 4;
             this.btSalvar.Text = "Salvar";
+            this.btSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSalvar.UseVisualStyleBackColor = true;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
             // 
             // btExcluir
             // 
-            this.btExcluir.Location = new System.Drawing.Point(338, 17);
+            this.btExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btExcluir.Image")));
+            this.btExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btExcluir.Location = new System.Drawing.Point(326, 17);
             this.btExcluir.Name = "btExcluir";
-            this.btExcluir.Size = new System.Drawing.Size(93, 32);
+            this.btExcluir.Size = new System.Drawing.Size(100, 45);
             this.btExcluir.TabIndex = 3;
             this.btExcluir.Text = "Excluir";
+            this.btExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btExcluir.UseVisualStyleBackColor = true;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
             // btAlterar
             // 
-            this.btAlterar.Location = new System.Drawing.Point(202, 17);
+            this.btAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btAlterar.Image")));
+            this.btAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btAlterar.Location = new System.Drawing.Point(222, 17);
             this.btAlterar.Name = "btAlterar";
-            this.btAlterar.Size = new System.Drawing.Size(74, 32);
+            this.btAlterar.Size = new System.Drawing.Size(100, 45);
             this.btAlterar.TabIndex = 2;
             this.btAlterar.Text = "Aletarar";
+            this.btAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btAlterar.UseVisualStyleBackColor = true;
             this.btAlterar.Click += new System.EventHandler(this.btAlterar_Click);
             // 
             // btLocalizar
             // 
-            this.btLocalizar.Location = new System.Drawing.Point(103, 17);
+            this.btLocalizar.Image = ((System.Drawing.Image)(resources.GetObject("btLocalizar.Image")));
+            this.btLocalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btLocalizar.Location = new System.Drawing.Point(116, 17);
             this.btLocalizar.Name = "btLocalizar";
-            this.btLocalizar.Size = new System.Drawing.Size(73, 32);
+            this.btLocalizar.Size = new System.Drawing.Size(100, 45);
             this.btLocalizar.TabIndex = 1;
             this.btLocalizar.Text = "Localizar";
+            this.btLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btLocalizar.UseVisualStyleBackColor = true;
             this.btLocalizar.Click += new System.EventHandler(this.btLocalizar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Location = new System.Drawing.Point(7, 17);
+            this.btInserir.Image = ((System.Drawing.Image)(resources.GetObject("btInserir.Image")));
+            this.btInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInserir.Location = new System.Drawing.Point(10, 17);
             this.btInserir.Name = "btInserir";
-            this.btInserir.Size = new System.Drawing.Size(74, 32);
+            this.btInserir.Size = new System.Drawing.Size(100, 45);
             this.btInserir.TabIndex = 0;
             this.btInserir.Text = "Inserir";
+            this.btInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserir.UseVisualStyleBackColor = true;
             this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
             // 

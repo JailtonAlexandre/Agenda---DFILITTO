@@ -29,14 +29,17 @@ namespace Agenda
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.btContato = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btContato
             // 
-            this.btContato.Location = new System.Drawing.Point(42, 144);
+            this.btContato.Image = ((System.Drawing.Image)(resources.GetObject("btContato.Image")));
+            this.btContato.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btContato.Location = new System.Drawing.Point(42, 60);
             this.btContato.Name = "btContato";
-            this.btContato.Size = new System.Drawing.Size(167, 34);
+            this.btContato.Size = new System.Drawing.Size(167, 118);
             this.btContato.TabIndex = 0;
             this.btContato.Text = "Contato";
             this.btContato.UseVisualStyleBackColor = true;
